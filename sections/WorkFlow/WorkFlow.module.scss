@@ -1,0 +1,61 @@
+.wrapper {
+  padding-top: 60px;
+
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    max-width: 1300px;
+    opacity: 0;
+    transform: scale(70%);
+    transition: 2s;
+
+    &.inView {
+      opacity: 1;
+      transform: scale(100%);
+      transition: 2s;
+    }
+
+    .topContent {
+      margin-bottom: 80px;
+      display: flex;
+      justify-content: space-between;
+
+      h2 {
+        flex: 1;
+        font-size: 28px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.8);
+      }
+      p {
+        flex: 2;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 300;
+      }
+    }
+
+    .botContent {
+      display: flex;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    .container {
+      .topContent {
+        flex-direction: column;
+
+        h2 {
+          margin-bottom: 24px;
+        }
+      }
+
+      .botContent {
+        flex-direction: column;
+      }
+    }
+  }
+}

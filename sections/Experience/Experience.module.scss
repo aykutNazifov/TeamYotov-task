@@ -1,0 +1,47 @@
+.wrapper {
+  background-image: url("/images/about-img.webp");
+
+  padding: 90px 0;
+  position: relative;
+  z-index: 1;
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: -1;
+    opacity: 0.8;
+    background: #0033c7;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1300px;
+    padding-left: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    .container {
+      padding-left: 0;
+      padding: 0 15px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    padding: 60px;
+    .container {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

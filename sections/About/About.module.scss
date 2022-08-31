@@ -1,0 +1,123 @@
+.container {
+  width: 100%;
+  height: auto;
+  padding: 100px 15px 0 15px;
+  margin: 0 auto;
+  max-width: 1300px;
+  display: flex;
+  justify-content: space-between;
+
+  .image {
+    width: 40%;
+    height: auto;
+    position: relative;
+  }
+
+  .content {
+    width: 60%;
+    height: 100%;
+    padding-bottom: 90px;
+    opacity: 0;
+    transform: scale(70%);
+    transition: 2s;
+
+    &.inView {
+      opacity: 1;
+      transform: scale(100%);
+      transition: 2s;
+    }
+
+    .titleWrapper {
+      padding-left: 180px;
+
+      span {
+        font-size: 80%;
+        font-weight: 400;
+        display: block;
+        margin-bottom: 0;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        color: #000000;
+        position: relative;
+        padding-right: 2px;
+
+        &::after {
+          position: absolute;
+          top: 50%;
+          left: 80px;
+          right: 0;
+          width: calc(100% - 80px);
+          height: 1px;
+          content: "";
+          background: #e1e8ff;
+        }
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 500;
+        color: rgba(0, 0, 0, 0.8);
+      }
+    }
+
+    .descriptionWrapper {
+      margin-top: 30px;
+      padding-left: 100px;
+
+      p {
+        font-size: 16px;
+        line-height: 1.8;
+        font-weight: 300;
+        color: #666666;
+        margin-bottom: 16px;
+      }
+
+      a {
+        font-weight: 500;
+        color: #002694;
+        border-bottom: 4px solid #0038db;
+        display: inline-flex;
+        align-items: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    height: auto;
+
+    .image {
+      display: block;
+      height: auto;
+    }
+
+    .content {
+      padding-bottom: 50px;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .container {
+    height: auto;
+    flex-direction: column;
+    padding-top: 100px;
+    margin-bottom: 50px;
+    .image {
+      width: 100%;
+      margin-bottom: 40px;
+      height: 300px;
+    }
+
+    .content {
+      width: 100%;
+      .titleWrapper {
+        padding-left: 0;
+      }
+      .descriptionWrapper {
+        padding-left: 0;
+      }
+    }
+  }
+}
